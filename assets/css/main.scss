@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// HIDE MOUSE
+$disableCursor: false;
+
+body,
+body * {
+  -webkit-user-select: none; // Safari
+  -moz-user-select: none;    // Firefox
+  -ms-user-select: none;     // Internet Explorer/Edge
+  user-select: none;         // Standard syntax
+}
+
+@if $disableCursor {
+  html, body, a, button, [role="button"], input, textarea, select {
+    cursor: none !important;
+  }
+  nuxt-link, a {
+    cursor: none !important;
+  }
+}
